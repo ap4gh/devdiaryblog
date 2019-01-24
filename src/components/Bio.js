@@ -24,7 +24,9 @@ function Bio() {
               </p>
             </div>
             <div className="social-media">
-              <a href="https://twitter.com/DiaryOfDev">Twitter</a>&nbsp;•&nbsp;<a href="https://github.com/ap4gh">GitHub</a>
+              <a href="https://twitter.com/DiaryOfDev">Twitter</a>&nbsp;
+              •&nbsp;<a href="https://github.com/ap4gh">GitHub</a>&nbsp;
+              •&nbsp;<a href="https://discord.gg/6RYUs42">Discord</a>
             </div>
           </div>
         )
