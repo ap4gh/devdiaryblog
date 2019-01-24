@@ -2,6 +2,46 @@ body {
     color: #172939;
 }
 
+.main-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.main-header h1, h3 {
+    margin-bottom: 0;
+}
+
+.theme-toggler {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.theme-toggler span {
+    margin-right: 0.5rem;
+    font-size: 0.9em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.app-container {
+    min-height: 100vh;
+    transition: color ease-out 0.5s;
+}
+
+.theme-dark {
+    background: #0a151f;
+    color: #f9f9f9;
+}
+
+.theme-dark blockquote {
+    color: #9f9f9f;
+}
+
+.theme-light {
+    color: #172939;
+    background: #f9f9f9;
+}
+
 a {
     color: #3b9f56;
 }
