@@ -4,23 +4,45 @@ import Toggle from 'react-toggle'
 
 import { rhythm, scale } from '../utils/typography'
 
-class Layout extends React.Component {
+// Webpack does'nt understand window object on browser, so this trick
+// will return the windows object from the browser.
+const windowGlobal = typeof window !== 'undefined' && window
+// Only light and dark themes are valid, if there is an invalid change
+// by the end-user, light theme will be set by default
+const valid_themes = ['light', 'dark']
 
+class Layout extends React.Component {
   constructor() {
     super()
+    // Theme is set to null by default.
     this.state = {
-      theme: window.localStorage.app_theme
+      theme: null
     }
   }
-
+  /**
+   * getpreferred theme will read the `app_theme` variable 
+   * stored in localStorage. If the theme name is not valid
+   * i.e. not from `valid_themes` array, then it will just 
+   * return a null.
+   */
   getPreferredTheme = () => {
-    return window.localStorage.app_theme || null;
+    if (valid_themes.indexOf(windowGlobal.localStorage.app_theme) === -1) return null
+    return windowGlobal.localStorage.app_theme;
   }
-
+  /**
+   * setPreferredTheme set the `app_theme` variable in localStorage.
+   * If the theme name passed is not valid then it will just set a
+   * theme of light by default.
+   */
   setPreferredTheme = (theme_name) => {
-    window.localStorage.setItem('app_theme', theme_name)
+    if (valid_themes.indexOf(theme_name) === -1) {
+      const err = new Error(`THEME ERROR: Invalid theme ${theme_name}`)
+      console.error(err)
+      return windowGlobal.localStorage.setItem('app_theme', 'light')
+    }
+    return windowGlobal.localStorage.setItem('app_theme', theme_name)
   }
-
+  // Handle when react-toggle is changed.
   changeTheme = e => {
     if (e.target.checked) {
       this.setPreferredTheme('dark')
@@ -31,10 +53,16 @@ class Layout extends React.Component {
       theme: this.getPreferredTheme()
     })
   }
-
+  /**
+   * Main purpose of using componentDidMount here is for persistant
+   * storage of `app_theme` preference. So in the beginning of app 
+   * render, it will read and set the theme of the app. If theme exist
+   * then it will just use and if not then just set it to light by
+   * default.
+   */
   componentDidMount = () => {
     if (!this.getPreferredTheme()) {
-      window.localStorage.setItem('app_theme', 'light')
+      this.setPreferredTheme('light')
     }
     this.setState({
       theme: this.getPreferredTheme()
@@ -45,64 +73,45 @@ class Layout extends React.Component {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
-
     if (location.pathname === rootPath) {
       header = (
-        <div className="main-header">
-          <h1
+        <h1
+          style={{
+            ...scale(1),
+            marginTop: 0,
+          }}
+        >
+          <Link
             style={{
-              ...scale(1),
-              marginTop: 0,
+              boxShadow: `none`,
+              textDecoration: `none`
             }}
+            to={`/`}
           >
-            <Link
-              style={{
-                boxShadow: `none`,
-                textDecoration: `none`
-              }}
-              to={`/`}
-            >
-              {title}
-            </Link>
-          </h1>
-          <label className="theme-toggler">
-            <span>Dark</span>
-            <Toggle
-              defaultChecked={this.state.theme == 'dark'}
-              onChange={e => this.changeTheme(e)}
-            />
-          </label>
-        </div>
+            {title}
+          </Link>
+        </h1>
       )
     } else {
       header = (
-        <div className="main-header">
-          <h3
+        <h3
+          style={{
+            fontFamily: `Montserrat, sans-serif`,
+            marginTop: 0,
+            color: `#3b9f56`
+          }}
+        >
+          <Link
             style={{
-              fontFamily: `Montserrat, sans-serif`,
-              marginTop: 0,
-              color: `#3b9f56`
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`,
             }}
+            to={`/`}
           >
-            <Link
-              style={{
-                boxShadow: `none`,
-                textDecoration: `none`,
-                color: `inherit`,
-              }}
-              to={`/`}
-            >
-              {title}
-            </Link>
-          </h3>
-          <label className="theme-toggler">
-            <span>Dark</span>
-            <Toggle
-              defaultChecked={this.state.theme == 'dark'}
-              onChange={e => this.changeTheme(e)}
-            />
-          </label>
-        </div>
+            {title}
+          </Link>
+        </h3>
       )
     }
     return (
@@ -115,7 +124,17 @@ class Layout extends React.Component {
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
         >
-          {header}
+          <div className="main-header">
+            {header}
+            {/* Toggle switch for changing theme */}
+            <label className="theme-toggler">
+              <span>Dark</span>
+              <Toggle
+                checked={this.state.theme == 'dark'}
+                onChange={e => this.changeTheme(e)}
+              />
+            </label>
+          </div>
           {children}
           <footer>
             © {new Date().getFullYear()} <a href="https://twitter.com/ap4tt">@ap4tt</a>
