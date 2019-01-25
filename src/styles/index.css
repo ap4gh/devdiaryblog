@@ -6,11 +6,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 2rem;
-}
-
-.main-header h1, h3 {
-    margin: 0;
+    padding-bottom: 3rem;
 }
 
 .brand,
@@ -18,6 +14,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
     color: #3b9f56;
+    margin: 0;
 }
 
 .react-toggle-switch.react-toggle--checked .react-toggle-track {
@@ -54,7 +51,6 @@ a {
 .bio-container {
     display: flex;
     flex-direction: column;
-    padding-bottom: 3rem;
 }
 
 .bio {
@@ -86,6 +82,11 @@ a {
     justify-content: flex-start;
 }
 
+.post-title {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
 footer {
     text-align: center;
 }
@@ -104,5 +105,9 @@ footer {
         margin-top: 0;
         align-items: center;
         justify-content: flex-end;
+    }
+
+    .post-title {
+        font-size: 1.8rem;
     }
 }
