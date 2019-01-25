@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Toggle from 'react-toggle'
 
-import { rhythm, scale } from '../utils/typography'
+import { rhythm } from '../utils/typography'
+import { HalfMoon, Sun } from './Emoji'
 
 // Webpack does'nt understand window object on browser, so this trick
 // will return the windows object from the browser.
@@ -75,12 +76,7 @@ class Layout extends React.Component {
     let header
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1),
-            marginTop: 0,
-          }}
-        >
+        <h1 className="brand">
           <Link
             style={{
               boxShadow: `none`,
@@ -94,13 +90,7 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-            color: `#3b9f56`
-          }}
-        >
+        <h3 className="sub-brand">
           <Link
             style={{
               boxShadow: `none`,
@@ -128,10 +118,14 @@ class Layout extends React.Component {
             {header}
             {/* Toggle switch for changing theme */}
             <label className="theme-toggler">
-              <span>Dark</span>
               <Toggle
+                className="react-toggle-switch"
                 checked={this.state.theme == 'dark'}
                 onChange={e => this.changeTheme(e)}
+                icons={{
+                  unchecked: <Sun />,
+                  checked: <HalfMoon />
+                }}
               />
             </label>
           </div>
