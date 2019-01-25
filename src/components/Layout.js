@@ -116,18 +116,16 @@ class Layout extends React.Component {
         >
           <div className="main-header">
             {header}
-            {/* Toggle switch for changing theme */}
-            <label className="theme-toggler">
-              <Toggle
-                className="react-toggle-switch"
-                checked={this.state.theme == 'dark'}
-                onChange={e => this.changeTheme(e)}
-                icons={{
-                  unchecked: <Sun />,
-                  checked: <HalfMoon />
-                }}
-              />
-            </label>
+            {/* Toggle switch for changing theme */}  
+            <Toggle
+              className="react-toggle-switch"
+              checked={this.state.theme == 'dark'}
+              onChange={e => this.changeTheme(e)}
+              icons={{
+                unchecked: <Sun />,
+                checked: <HalfMoon />
+              }}
+            />
           </div>
           {children}
           <footer>
