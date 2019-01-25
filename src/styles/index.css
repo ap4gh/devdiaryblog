@@ -9,7 +9,14 @@ body {
 }
 
 .main-header h1, h3 {
-    margin-bottom: 0;
+    margin: 0;
+}
+
+.brand,
+.sub-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: #3b9f56;
 }
 
 .theme-toggler {
@@ -23,6 +30,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.react-toggle-switch.react-toggle--checked .react-toggle-track {
+    background: #3b9f56;
+}
+
 .app-container {
     min-height: 100vh;
     transition: color ease-out 0.5s;
@@ -33,9 +44,13 @@ body {
     color: #f9f9f9;
 }
 
-.theme-dark blockquote {
-    color: #9f9f9f;
-}
+    .theme-dark blockquote {
+        color: #9f9f9f;
+    }
+
+    .theme-dark hr {
+        background: #727272;
+    }
 
 .theme-light {
     color: #172939;
@@ -49,6 +64,7 @@ a {
 .bio-container {
     display: flex;
     flex-direction: column;
+    padding-bottom: 3rem;
 }
 
 .bio {
@@ -86,7 +102,7 @@ footer {
 
 @media only screen and (min-width: 540px){
     .brand {
-        font-size: 3.4rem;
+        font-size:2.8rem;
     }
 
     .bio-container {
