@@ -5,6 +5,7 @@ body {
 .main-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 2rem;
 }
 
@@ -17,17 +18,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
     color: #3b9f56;
-}
-
-.theme-toggler {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-}
-.theme-toggler span {
-    margin-right: 0.5rem;
-    font-size: 0.9em;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .react-toggle-switch.react-toggle--checked .react-toggle-track {
