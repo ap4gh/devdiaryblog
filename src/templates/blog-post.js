@@ -37,7 +37,6 @@ class BlogPostTemplate extends React.Component {
 
         <ul
           style={{
-            marginTop: `4rem`,
             display: `flex`,
             flexWrap: `wrap`,
             justifyContent: `space-between`,
