@@ -18,6 +18,7 @@ class BlogPostTemplate extends React.Component {
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1 className="post-title">{post.frontmatter.title}</h1>
         <p
+          className="post-metadata"
           style={{
             ...scale(-1 / 5),
             display: `block`,
