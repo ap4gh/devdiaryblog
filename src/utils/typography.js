@@ -8,6 +8,9 @@ Wordpress2016.overrideThemeStyles = () => {
     },
     'a': {
       color: `#3b9f56`
+    },
+    'h1.post-title': {
+      fontSize: `1.9rem`
     }
   }
 }
