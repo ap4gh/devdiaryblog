@@ -32,7 +32,8 @@ blockquote {
 
 .theme-dark {
     background: #1e2127;
-    color: #c0c0c0;
+    color: #e6e6e6;
+    font-weight: 300;
     --inlineCode-bg: hsl(222, 14%, 25%);
     --inlineCode-text: #e6e6e6;
 }
