@@ -20,7 +20,7 @@ function Bio() {
                 />
               </div>
               <p className="bio-text">
-                A blog about Programming&nbsp;💻, Designing&nbsp;🌟 & Development&nbsp;⚒.
+                A blog about Programming&nbsp;💻, Designing&nbsp;🌟 & Productivity&nbsp;💯.
               </p>
             </div>
             <div className="social-media">
