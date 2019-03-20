@@ -3,7 +3,7 @@ module.exports = {
     title: `DevDiary`,
     author: `A. Pandey`,
     description: `A developer blog by @ap4tt on Twitter`,
-    siteUrl: ``,
+    siteUrl: `https://dev-diary.xyz`,
     social: {
       twitter: `DiaryOfDev`,
     },
@@ -51,6 +51,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-136576541-1`,
       },
     },
     `gatsby-plugin-feed`,
