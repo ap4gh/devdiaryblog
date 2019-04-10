@@ -1,11 +1,10 @@
 {
   "name": "devdiary-blog",
-  "private": true,
   "description": "Blog on Programming, Designing and Development",
-  "version": "0.1.0",
-  "author": "Amrit Pandey & Kyle Mathews <mathews.kyle@gmail.com>",
+  "version": "1.0.0",
+  "author": "Amrit Pandey <pandey.amrit@outlook.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/ap4gh/devdiaryblog/issues"
   },
   "dependencies": {
     "gatsby": "^2.0.76",
@@ -41,16 +40,14 @@
     "eslint-plugin-react": "^7.11.1",
     "prettier": "^1.14.2"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://dev-diary.xyz",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "blog"
   ],
   "license": "MIT",
   "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
+  "repository": "",
   "scripts": {
     "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
