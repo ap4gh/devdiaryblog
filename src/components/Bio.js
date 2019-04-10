@@ -9,24 +9,21 @@ function Bio() {
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { author, social } = data.site.siteMetadata
+        const { author } = data.site.siteMetadata
         return (
           <div className="bio-container">
             <div className="bio">
               <div className="bio-pic">
-                <Image
-                  fixed={data.avatar.childImageSharp.fixed}
-                  alt={author}
-                />
+                <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
               </div>
               <p className="bio-text">
-                A blog about Programming&nbsp;💻, Designing&nbsp;🌟 & Productivity&nbsp;💯.
+                A blog about Programming&nbsp;💻, Designing&nbsp;🌟 &
+                Productivity&nbsp;💯.
               </p>
             </div>
             <div className="social-media">
-              <a href="https://twitter.com/DiaryOfDev">Twitter</a>&nbsp;
-              •&nbsp;<a href="https://github.com/ap4gh">GitHub</a>&nbsp;
-              •&nbsp;<a href="https://discord.gg/6RYUs42">Discord</a>
+              <a href="https://twitter.com/DiaryOfDev">Twitter</a>&nbsp; •&nbsp;
+              <a href="https://github.com/ap4gh/devdiaryblog">GitHub</a>
             </div>
           </div>
         )
