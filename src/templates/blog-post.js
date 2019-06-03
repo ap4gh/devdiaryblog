@@ -5,7 +5,7 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
-import { node } from 'prop-types';
+import Ad from '../components/Ad'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -35,6 +35,12 @@ class BlogPostTemplate extends React.Component {
           }}
         />
         <Bio />
+
+        <Ad 
+          client="ca-pub-6334208505740723"
+          slot="7781206035"
+          format="auto"
+        />
 
         <ul
           style={{
