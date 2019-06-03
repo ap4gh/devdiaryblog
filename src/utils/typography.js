@@ -15,6 +15,19 @@ Wordpress2016.overrideThemeStyles = () => {
     'h1, h2, h3, h4, h5, h6': {
       fontFamily: 'Montserrat',
       fontWeight: 600
+    },
+    'h2, h3': {
+      marginBottom: '10px'
+    },
+    'h3': {
+      fontSize: '1.55rem'
+    },
+    '@media only screen and (min-width: 640px)': {
+      'p': {
+        fontSize: '17px',
+        fontWeight: 300,
+        lineHeight: 1.7
+      }
     }
   }
 }
