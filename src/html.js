@@ -18,7 +18,7 @@ export default function HTML(props) {
         <meta name="apple-mobile-web-app-status-bar-style" content={colors.theme} />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_IN" />
-        <meta property="og:image" constent="//i.imgur.com/xSwKS2Q.png" />
+        <meta property="og:image" content="//i.imgur.com/xSwKS2Q.png" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
