@@ -23,7 +23,7 @@ Wordpress2016.overrideThemeStyles = () => {
       fontSize: '1.55rem'
     },
     '@media only screen and (min-width: 680px)': {
-      'p': {
+      'p, li': {
         fontSize: '17px',
         fontWeight: 300,
         lineHeight: 1.78
