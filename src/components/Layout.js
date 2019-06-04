@@ -105,12 +105,12 @@ class Layout extends React.Component {
       )
     }
     return (
-      <div className={`theme-${this.state.theme} app-container `}>
+      <div className={`theme-${this.state.theme} layout-container `}>
         <div
+          className="app-container"
           style={{
             marginLeft: `auto`,
             marginRight: `auto`,
-            maxWidth: rhythm(25),
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
         >
