@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import colors from './utils/colors'
 
 export default function HTML(props) {
   return (
@@ -11,6 +12,13 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <meta name="theme-color" content={colors.theme} />
+        <meta name="msapplication-navbutton-color" content={colors.theme} />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content={colors.theme} />
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:image" constent="//i.imgur.com/xSwKS2Q.png" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
