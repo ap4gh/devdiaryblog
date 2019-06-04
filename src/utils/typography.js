@@ -22,11 +22,19 @@ Wordpress2016.overrideThemeStyles = () => {
     'h3': {
       fontSize: '1.55rem'
     },
-    '@media only screen and (min-width: 640px)': {
+    '@media only screen and (min-width: 680px)': {
       'p': {
         fontSize: '17px',
         fontWeight: 300,
-        lineHeight: 1.7
+        lineHeight: 1.78
+      },
+      'h1.post-title': {
+        fontSize: '2.6rem',
+        lineHeight: '1.2',
+        fontWeight: '600' 
+      },
+      'p.post-metadata': {
+        fontSize: '1.1rem'
       }
     }
   }
