@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `DevDiary`,
-    author: `A. Pandey`,
+    author: `Amrit Pandey`,
     description: `A developer blog by @ap4tt on Twitter`,
     siteUrl: `https://dev-diary.xyz`,
     social: {
