@@ -22,9 +22,13 @@ body {
     background: #3b9f56;
 }
 
-.app-container {
+.layout-container {
     min-height: 100vh;
     transition: color ease-out 0.5s;
+}
+
+.app-container {
+  max-width: 778px;
 }
 
 blockquote {
