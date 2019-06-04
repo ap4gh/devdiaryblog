@@ -5,7 +5,6 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
-import Ad from '../components/Ad'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -20,10 +19,10 @@ class BlogPostTemplate extends React.Component {
         <p
           className="post-metadata"
           style={{
-            ...scale(-1 / 5),
+            ...scale(-1 / 9),
             display: `block`,
             marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
+            marginTop: rhythm(-0.5),
           }}
         >
           {post.frontmatter.date} <i>By</i> <a href={post.frontmatter.author_website}>{post.frontmatter.author}</a>
@@ -35,12 +34,6 @@ class BlogPostTemplate extends React.Component {
           }}
         />
         <Bio />
-
-        <Ad 
-          client="ca-pub-6334208505740723"
-          slot="7781206035"
-          format="auto"
-        />
 
         <ul
           style={{
