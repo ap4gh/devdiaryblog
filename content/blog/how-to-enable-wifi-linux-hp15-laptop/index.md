@@ -34,8 +34,9 @@ sudo apt dist-upgrade
 ```
 
 ### Step 3
-Clone this repo, which has driver codes for most of the HP 15 laptop chipset. Thanks to the github user `lwfinger` for maintaining the repo. Clone it where ever you want.
+Clone this repo, which has driver codes for most of the HP 15 laptop chipset. Thanks to the github user `lwfinger` for maintaining the repo. Clone it in your home directory.
 ```
+cd $HOME
 git clone https://github.com/lwfinger/rtlwifi_new.git
 ```
 
