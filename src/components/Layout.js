@@ -129,7 +129,7 @@ class Layout extends React.Component {
           </div>
           {children}
           <footer>
-            © {new Date().getFullYear()} <a href="https://twitter.com/ap4tt">@ap4tt</a>
+            © {new Date().getFullYear()} <a href="https://twitter.com/amrit239">@amrit239</a>
           </footer>
         </div>
       </div>
