@@ -32,8 +32,6 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script dangerouslySetInnerHTML={{__html: '(window.adsbygoogle = window.adsbygoogle || []).push({ google_ad_client: "ca-pub-6334208505740723", enable_page_level_ads: true });'}}></script>
       </body>
     </html>
   )
