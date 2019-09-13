@@ -1,5 +1,5 @@
 ---
-title: 'How to fix WiFi issue on HP 15 Laptops'
+title: 'HOWTO: Fix WiFi issue on HP 15 Laptops'
 date: '2019-06-08'
 author: 'Amrit Pandey'
 author_website: 'https://amritpandey.dev'

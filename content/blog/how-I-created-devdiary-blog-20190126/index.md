@@ -2,7 +2,7 @@
 title: 'Creating DevDiary Blog with Gatsby'
 date: '2019-01-26'
 author: 'Amrit Pandey'
-author_website: 'https://amritpandey.xyz'
+author_website: 'https://amritpandey.dev'
 ---
 
 I started using Gatsby just a month ago. It is a *really fast* static website generator that can work with CMS, text data, databases, APIs, CSVs etc. to create static websites and  webapps. At the core of Gatsby are Webpack, React and GraphQL.

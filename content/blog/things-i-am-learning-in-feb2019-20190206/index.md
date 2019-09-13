@@ -2,7 +2,7 @@
 title: 'Things I am learning in February 2019'
 date: '2019-02-06'
 author: 'Amrit Pandey'
-author_website: 'https://amritpandey.xyz'
+author_website: 'https://amritpandey.dev'
 ---
 ![learning brain picture](./watering-brain.jpg)
 
