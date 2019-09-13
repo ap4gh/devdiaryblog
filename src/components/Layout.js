@@ -129,7 +129,8 @@ class Layout extends React.Component {
           </div>
           {children}
           <footer>
-            © {new Date().getFullYear()} <a href="https://twitter.com/amrit239">@amrit239</a>
+            Copyrights {new Date().getFullYear()} <a href="https://twitter.com/DiaryOfDev">@DiaryOfDev</a> |&nbsp;
+            <a href="https://github.com/ap4gh/devdiaryblog/blob/master/LICENSE">Licenses</a>
           </footer>
         </div>
       </div>
