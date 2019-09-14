@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import AdSense from 'react-adsense'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
@@ -28,6 +29,16 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date} <i>By</i> <a href={post.frontmatter.author_website}>{post.frontmatter.author}</a>
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
+        {/* Google Ad Unit Horizontal */}
+        <AdSense.Google
+          client='ca-pub-6334208505740723'
+          slot='1452552432'
+          style={{ display: 'block' }}
+          layout='in-article'
+          format='fluid'
+        />
+
         <hr
           style={{
             marginBottom: rhythm(1),
