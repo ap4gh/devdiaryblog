@@ -3,7 +3,7 @@ module.exports = {
     title: `DevDiary`,
     author: `Amrit Pandey`,
     description: `A developer blog by @DiaryOfDev on Twitter`,
-    siteUrl: `https://dev-diary.xyz`,
+    siteUrl: `https://diaryofdev.com`,
     social: {
       twitter: `DiaryOfDev`,
     },
@@ -50,7 +50,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
         trackingId: `UA-136576541-1`,
       },
     },
@@ -58,8 +57,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `DevDiary Blog`,
+        short_name: `DevDiary`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#3b9f56`,
